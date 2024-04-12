@@ -3,3 +3,12 @@ current value
 total gain/loss
 
 just look at fidelity site
+
+
+!!!! Dates in DailyStockMetric are unique to an indiviual stock_id
+Acount name is also unique to an individual account
+
+What are Referential Intergrity Constraints?
+
+
+
