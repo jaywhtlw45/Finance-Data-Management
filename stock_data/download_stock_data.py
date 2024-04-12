@@ -15,8 +15,8 @@ for symbol in stock_symbols:
     # Selecting relevant columns
     stock_data = stock_data[['Open', 'High', 'Low', 'Close', 'Volume']]
     # Save to CSV
-    stock_data.to_csv(f"{symbol}_data.csv")
-    print(f"Data downloaded and saved to {symbol}_data.csv")
+    stock_data.to_csv(f"./stock_data/{symbol}_data.csv")
+    print(f"Data downloaded and saved to stock_data/{symbol}_data.csv")
 
 print("Data download complete!")
 

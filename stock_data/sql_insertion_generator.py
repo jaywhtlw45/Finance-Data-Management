@@ -15,8 +15,14 @@ def generate_sql_insertions(csv_file):
 
     return sql_commands
 
+csv_path = "./stock_data/"
+csv_files = [
+    './stock_data/AAPL_data.csv', 
+    './stock_data/MSFT_data.csv', 
+    './stock_data/COIN_data.csv', 
+    './stock_data/PLTR_data.csv', 
+    './stock_data/GOOGL_data.csv']
 
-csv_files = ['AAPL_data.csv', 'MSFT_data.csv', 'COIN_data.csv', 'PLTR_data.csv', 'GOOGL_data.csv']
 dest_file = "./sql_files/insert_daily_metrics.sql"
 
 # Ensure the directory exists
