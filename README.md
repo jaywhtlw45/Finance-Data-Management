@@ -13,13 +13,47 @@ The database schema consists of the following tables:
 5. **StockHolding**: Stores information about the stocks held in each account.
 6. **Customers**: Stores customer information, including names, emails, dates of birth, and social security numbers.
 
-## Data Download Script
+## Database Usage
+
+To use the .sql files of the project, follow these steps:
+
+1. Ensure that you have the required SQL database management system installed and running.
+
+2. Navigate to the project directory and locate the /sql_files directory.
+
+3. Execute the following .sql files in the specified order:
+
+   - Use the commands in the following file to create the database schema and tables. Ensure that you first create AND select the database before adding the tables:
+
+        `/sql_files/create_db.sql`
+
+    - Insert the stock into the database with the following commands:
+  
+        `/sql_files/insert_stocks.sql` 
+
+    - Insert the daily metrics into the database with the following commands:
+  
+        `/sql_files/insert_daily_metrics.sql`
+
+    - Insert the customers and accounts into the database with the following commands:
+  
+        `/sql_files/insert_customers_and_accounts.sql`
+
+    - Insert the transactions and holdings into the database with the following commands:
+  
+        `/sql_files/insert_transactions_and_holdings.sql`
+
+4. After executing the above .sql files, you can now run `/sql_files/example_queries.sql` to perform various queries on the database.
+
+## Data Download Script (Optional)
 
 The `/stock_data/download_stock_data.py` script is provided to download historical stock data. The data is saved as CSV files for each stock.
 
 The `/stock_data/sql_insertion_generator.py` script is provided to generate SQL commands to insert the downloaded data into the database.
 
-## Usage
+## Stock Metrics Retrieval (Optional)
+
+Example of how to retrieve stock metrics for a specific stock:
 
 1. Install the required Python packages:
     ```
