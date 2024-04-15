@@ -6,6 +6,9 @@ This project aims to manage financial market data and brokerage firm operations 
 
 The database schema consists of the following tables:
 
+<img src="diagrams/database/database.png" alt="alt text" width="650"/>
+
+
 1. **Stocks**: Stores information about individual stocks.
 2. **DailyStockMetric**: Records daily metrics for each stock, including open, close, high, low, and volume data.
 3. **Transactions**: Tracks transactions involving stocks, including buy/sell actions, prices, and quantities.
