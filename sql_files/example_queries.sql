@@ -1,4 +1,15 @@
 -- How much stock does Hudson have in his investment account?
+SELECT 
+    SUM(CASE WHEN type = 'Buy' THEN quantity ELSE -quantity END) AS total_stock_quantity
+FROM 
+    Transactions
+WHERE 
+    account_id = (
+        SELECT account_id 
+        FROM Accounts 
+        WHERE name = 'Hudson Investment'
+    );
+
 
 -- How long has the investment account for Hudson been active?
 -- What is the average accounts life. 
