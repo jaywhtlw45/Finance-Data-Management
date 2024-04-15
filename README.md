@@ -1,4 +1,4 @@
-# Financial Data Management Project
+# Financial Data Management 
 
 This project aims to manage financial market data and brokerage firm operations using a relational database system. It includes a database schema and a Python script to download historical stock data for popular stocks.
 
