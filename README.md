@@ -4,8 +4,6 @@ This project aims to manage financial market data and brokerage firm operations 
 
 ## Database Schema
 
-The database schema consists of the following tables:
-
 <img src="diagrams/database/database.png" alt="alt text" width="650"/>
 
 
