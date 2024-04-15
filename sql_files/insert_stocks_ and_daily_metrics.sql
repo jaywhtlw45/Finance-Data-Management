@@ -1,3 +1,10 @@
+-- Insert Stocks
+insert INTO Stock (symbol, company_name, stock_exchange) VALUES ('AAPL', 'Apple Inc', 'NASDAQ');
+insert INTO Stock (symbol, company_name, stock_exchange) VALUES ('COIN', 'Coinbase Global Inc', 'NASDAQ');
+insert INTO Stock (symbol, company_name, stock_exchange) VALUES ('GOOGL', 'Alphabet Inc', 'NASDAQ');
+insert INTO Stock (symbol, company_name, stock_exchange) VALUES ('MSFT', 'Microsoft Corp', 'NASDAQ');
+insert INTO Stock (symbol, company_name, stock_exchange) VALUES ('PLTR', 'Palantir Technologies Inc', 'NASDAQ');
+
 -- ./stock_data/AAPL_data.csv
 INSERT INTO DailyStockMetric (stock_id, date, open_price, close_price, high_price, low_price, volume) SELECT stock_id, '2024-03-15', 171.1699981689453, 172.6199951171875, 172.6199951171875, 170.2899932861328, 121664700 FROM Stock WHERE symbol = './stock';
 INSERT INTO DailyStockMetric (stock_id, date, open_price, close_price, high_price, low_price, volume) SELECT stock_id, '2024-03-18', 175.57000732421875, 173.72000122070312, 177.7100067138672, 173.52000427246094, 75604200 FROM Stock WHERE symbol = './stock';

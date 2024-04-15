@@ -39,7 +39,7 @@ CREATE TABLE Accounts (
     FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
 );
 
-CREATE TABLE Transactions(
+CREATE TABLE Transactions (
     transaction_id INT AUTO_INCREMENT PRIMARY KEY,
     stock_id INT,
     account_id INT,
