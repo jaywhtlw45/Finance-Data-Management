@@ -28,6 +28,15 @@ CREATE TABLE Customer (
     ssn VARCHAR(11) UNIQUE
 );
 
+CREATE TABLE CustomerExtended (
+    customer_id INT PRIMARY KEY,
+    address VARCHAR(255),
+    city VARCHAR(100),
+    state VARCHAR(50),
+    phone_number VARCHAR(20),
+    FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
+);
+
 CREATE TABLE Accounts (
     account_id INT AUTO_INCREMENT PRIMARY KEY,
     date_opened DATE,
