@@ -62,7 +62,7 @@ CREATE TABLE Transactions (
 
 
 CREATE TABLE StockHolding (
-    holding_id INT AUTO_INCREMENT PRIMARY KEY,
+    -- holding_id INT AUTO_INCREMENT PRIMARY KEY,
     account_id INT,
     stock_id INT,
     quantity INT,
