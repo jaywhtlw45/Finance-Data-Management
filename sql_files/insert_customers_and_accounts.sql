@@ -5,6 +5,13 @@ VALUES
     ('Asterios', 'Sante', 'asterios@example.com', '1987-09-30', '222-22-2222'),
     ('Jaak', 'Pantelis', 'jaak@example.com', '1996-02-10', '333-33-3333');
 
+--Insert extra info for customers
+INSERT INTO CustomerExtended (address, city, state, phone_number)
+VALUES
+    ('1234 E Willow Ave', 'Fresno', 'California', '559-245-5522'),
+    ('5721 N Palm Ave', 'Ontario', 'Ohio', '764-442-1621'),
+    ('5210 W Dakota Ave', 'Houston', 'Texas', '411-286-8344');
+
 -- Insert accounts for each customer
 INSERT INTO Accounts (date_opened, date_closed, customer_id, type, name, balance)
 VALUES
