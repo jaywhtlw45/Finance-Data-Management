@@ -19,3 +19,4 @@ VALUES
     (2019-02-06, NULL, 3, 'Checking', 'Jaak Checking', 2000.00),
     (2019-02-06, NULL, 3, 'Savings', 'Jaak Savings', 6000.00),
     (2019-02-06, NULL, 3, 'Investment', 'Jaak Investment', 8000.00);
+
