@@ -6,7 +6,7 @@ just look at fidelity site
 
 
 !!!! Dates in DailyStockMetric are unique to an indiviual stock_id
-Acount name is also unique to an individual account
+Acount name is also unique to a customer. Partial keys
 
 What are Referential Intergrity Constraints?
 
