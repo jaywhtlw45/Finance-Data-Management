@@ -1,10 +1,19 @@
 CREATE DATABASE if not exists FinancialMarket;
 
+CREATE TABLE Company (
+    company_id INT AUTO_INCREMENT PRIMARY KEY,
+    company_name VARCHAR(255) UNIQUE,
+    industry VARCHAR(255),
+    headquarters VARCHAR(255),
+    website VARCHAR(255)
+);
+
 CREATE TABLE Stock (
     stock_id INT AUTO_INCREMENT PRIMARY KEY,
     symbol VARCHAR(10) UNIQUE,
     company_name VARCHAR(255),
-    stock_exchange VARCHAR(50)
+    stock_exchange VARCHAR(50),
+    FOREIGN KEY (company_name) REFERENCES Company(company_name)
 );
 
 CREATE TABLE DailyStockMetric (
@@ -28,14 +37,7 @@ CREATE TABLE Customer (
     ssn VARCHAR(11) UNIQUE
 );
 
-CREATE TABLE CustomerExtended (
-    customer_id INT PRIMARY KEY,
-    address VARCHAR(255),
-    city VARCHAR(100),
-    state VARCHAR(50),
-    phone_number VARCHAR(20),
-    FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
-);
+
 
 CREATE TABLE Accounts (
     account_id INT AUTO_INCREMENT PRIMARY KEY,
