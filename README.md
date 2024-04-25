@@ -4,7 +4,7 @@ This project aims to manage financial market data and brokerage firm operations 
 
 ## Database Schema
 
-<img src="diagrams/database/database(new).png" alt="alt text" width="650"/>
+<img src="diagrams/database/database_ (new).png" alt="alt text" width="650"/>
 
 
 1. **Stocks**: Stores information about individual stocks.
