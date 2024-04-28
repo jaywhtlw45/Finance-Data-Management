@@ -43,7 +43,7 @@ CREATE TABLE Accounts (
     date_opened DATE,
     date_closed DATE,
     customer_id INT,
-    ptype TEXT CHECK(pType in ('Savings', 'Checking', 'Investment')),
+    type ENUM('Savings', 'Checking', 'Investment'),
     name VARCHAR(100),
     balance DECIMAL(12, 2),
     FOREIGN KEY (customer_id) REFERENCES Customer(customer_id) on update cascade on delete cascade

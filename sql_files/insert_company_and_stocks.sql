@@ -1,4 +1,4 @@
---Insert Company
+-- Insert Company
 INSERT INTO Company (company_name, industry, headquarters, website) VALUES ('Apple Inc', 'Technology', 'Cupertino, CA', 'https://apple.com');
 INSERT INTO Company (company_name, industry, headquarters, website) VALUES ('Coinbase Global Inc', 'Finance', 'San Francisco, CA', 'https://coinbase.com');
 INSERT INTO Company (company_name, industry, headquarters, website) VALUES ('Alphabet Inc', 'Technology', 'Mountain View, CA', 'https://abc.xyz');

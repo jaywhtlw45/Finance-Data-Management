@@ -30,7 +30,7 @@ To use the .sql files of the project, follow these steps:
 
     - Insert the stock into the database with the following commands:
   
-        `/sql_files/insert_stocks.sql` 
+        `/sql_files/insert_company_ and_stocks.sql` 
 
     - Insert the daily metrics into the database with the following commands:
   
