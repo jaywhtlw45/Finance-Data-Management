@@ -3,7 +3,7 @@ import os
 
 # Function to read CSV file and generate SQL insertion commands
 def generate_sql_insertions(csv_file):
-    stock_symbol = csv_file.split('_')[0]
+    stock_symbol = csv_file.split('/')[2].split('_')[0]
     sql_commands = []
 
     with open(csv_file, 'r') as file:
