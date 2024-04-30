@@ -1,22 +1,16 @@
 -- How much stock does Hudson have in his investment account?
-
 SELECT s.symbol AS StockSymbol, sh.quantity AS Quantity
 FROM StockHolding sh
 JOIN Stock s ON sh.stock_id = s.stock_id
 JOIN Accounts a ON sh.account_id = a.account_id
 WHERE a.name = 'Hudson Investment';
 
-
-select * from Transactions;
-select * from StockHolding;
 -- How long has the investment account for Hudson been active?
-
 SELECT DATEDIFF(NOW(), date_opened) AS AccountAgeInDays
 FROM Accounts
 WHERE Accounts.name = 'Hudson Investment';
 
 -- What is the average accounts life. 
-
 SELECT AVG(DATEDIFF(NOW(), date_opened)) AS AverageAccountLifeInDays
 FROM Accounts;
 
@@ -42,31 +36,7 @@ HAVING SUM(StockHolding.quantity) = (
     ) AS MaxQuantities
 );
 
--- What is the most traded stock for all customers?
-
--- What is the avg cost basis and total cost basis of AAPL for Hudson's investment account?
--- avg cost basis = cost per share that Hudson paid
--- total cost basis = total amount Hudson paid for all shares
-
--- What is the current value of all Hudson's investment account?
-
--- What is the largest position in Hudson's investment account?
--- position = value of a stock at the current time multiplied by the quantity of that stock in the account. 
--- 1. Check the most recent price of the stock, then multiply by number of shares in the account.
--- 2. Do this for all stocks and choose the maximum.
-
--- What percent of the account is each stock for Hudson's investment account?
--- 1. Calculate the position of for each stock in the account. 
--- 2. Use the sum of all positions to calculate the percentage of each stock.
-
--- What is the total worth of Hudson's investment account (cash position and investment)?
-
--- Can also include querries about daily metrics------------------------------
-
--- Which stock has the highest market cap?
-
 -- Which stock had the highest movement on the open over a given 2 week span?
-
 SELECT s.symbol, (MAX(dsm.open_price) - MIN(dsm.open_price)) AS movement_on_open
 FROM DailyStockMetric dsm
 JOIN Stock s ON dsm.stock_id = s.stock_id
@@ -76,7 +46,6 @@ ORDER BY movement_on_open DESC
 LIMIT 1;
 
 -- What is the highest traded stock in the technology industry?
-
 SELECT S.symbol AS stock_symbol, S.company_name AS company_name, MAX(D.volume) AS max_volume
 FROM Company AS C
 JOIN Stock AS S ON C.company_name = S.company_name
@@ -108,22 +77,14 @@ WHERE start_metric.date = '2024-03-20' AND end_metric.date = '2024-03-28'
 ORDER BY price_change DESC;
 
 -- Jaak wants to buy 10 more shares of APPL. 
-
 INSERT INTO Transactions (stock_id, account_id, type, date, stock_price, quantity)
 SELECT Stock.stock_id, Accounts.account_id, 'Buy', '2024-04-11', 170.00, 6
 FROM Stock, Accounts
 WHERE Stock.symbol = 'AAPL' AND Accounts.name LIKE 'Jaak Investment';  
 
-select * from Transactions;
-select * from StockHolding;
-
 -- Update the Jaaks new transaction into his stockholding.
-
 INSERT INTO StockHolding (account_id, stock_id, quantity)
 SELECT Accounts.account_id, Stock.stock_id, 10
 FROM Stock, Accounts
 WHERE Stock.symbol = 'AAPL' AND Accounts.name LIKE 'Jaak Investment'
 ON DUPLICATE KEY UPDATE quantity = quantity + 10;
-
-select * from Transactions;
-select * from StockHolding;
