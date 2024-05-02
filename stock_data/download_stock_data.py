@@ -20,4 +20,3 @@ for symbol in stock_symbols:
 
 print("Data download complete!")
 
-#script written by gpt

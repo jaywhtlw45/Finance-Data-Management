@@ -44,14 +44,15 @@ WHERE Stock.symbol = 'GOOGL' AND Accounts.name LIKE 'Jaak Investment';
 INSERT INTO Transactions (stock_id, account_id, type, date, stock_price, quantity)
 SELECT Stock.stock_id, Accounts.account_id, 'Buy', '2024-04-11', 22.00, 5
 FROM Stock, Accounts
-WHERE Stock.symbol = 'PLTR' AND Accounts.name LIKE 'Jaak Investment';     
+WHERE Stock.symbol = 'PLTR' AND Accounts.name LIKE 'Jaak Investment';    
 
--- Does not work !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+-- The intention is to query the stock price on a given day when making a transaction.
+-- There was however an error with the query. Instead the values were manually entered.
+
 -- INSERT INTO Transactions (stock_id, account_id, type, date, stock_price, quantity)
 -- SELECT Stock.stock_id, Accounts.account_id, 'Buy', '2024-04-11', Stock.open_price, 5
 -- FROM Stock, Accounts
--- WHERE Stock.symbol = 'PLTR' AND Accounts.name LIKE 'Jaak Investment'; 
--- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+-- WHERE Stock.symbol = 'PLTR' AND Accounts.name LIKE 'Jaak Investment';  
 
 -- Update Hudson's holdings after transactions
 -- Buy AAPL
@@ -116,4 +117,5 @@ SELECT Accounts.account_id, Stock.stock_id, 5
 FROM Stock, Accounts
 WHERE Stock.symbol = 'PLTR' AND Accounts.name LIKE 'Jaak Investment'
 ON DUPLICATE KEY UPDATE quantity = quantity + 5;
+
 
