@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 # List of stock symbols
 stock_symbols = ['AAPL', 'MSFT', 'COIN', 'PLTR', 'GOOGL']
 
-# Define start and end dates for data retrieval (four weeks ago from today)
+# Define start and end dates
 end_date = datetime.today().strftime('%Y-%m-%d')
 start_date = (datetime.today() - timedelta(weeks=4)).strftime('%Y-%m-%d')
 
@@ -18,5 +18,5 @@ for symbol in stock_symbols:
     stock_data.to_csv(f"./stock_data/{symbol}_data.csv")
     print(f"Data downloaded and saved to stock_data/{symbol}_data.csv")
 
-print("Data download complete!")
+print("Data download complete")
 
