@@ -14,6 +14,10 @@ This project aims to manage financial market data and brokerage firm operations 
 5. **StockHolding**: Stores information about the stocks held in each account.
 6. **Customers**: Stores customer information, including names, emails, dates of birth, and social security numbers.
 
+## Entity Relation Diagram
+
+<img src="diagrams/entity_relation/er_diagram.png" alt="alt text" width="650"/>
+
 ## Database Usage
 
 To use the .sql files of the project, follow these steps:
